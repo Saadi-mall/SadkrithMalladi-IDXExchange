@@ -1,0 +1,97 @@
+Rows before Residential filter: 825587
+Rows after Residential filter: 523208
+Saved to listed_combined.csv
+
+Shape: (523208, 84)
+
+Column dtypes:
+OriginalListPrice               float64
+ListingKey                        int64
+ListAgentEmail                      str
+CloseDate                           str
+ClosePrice                      float64
+                                 ...   
+BuyerOfficeName.1                   str
+AssociationFee                  float64
+LotSizeSquareFeet               float64
+MiddleOrJuniorSchoolDistrict    float64
+UnparsedAddress.1                   str
+Length: 84, dtype: object
+
+Missing values:
+                          missing_count  missing_pct
+TaxAnnualAmount                  523208        100.0
+FireplacesTotal                  523208        100.0
+ElementarySchoolDistrict         523208        100.0
+TaxYear                          523208        100.0
+BusinessType                     523208        100.0
+...                                 ...          ...
+ParkingTotal                          6          0.0
+ListingKey                            0          0.0
+ListingId                             0          0.0
+ListPrice.1                           0          0.0
+DaysOnMarket.1                        0          0.0
+
+[84 rows x 2 columns]
+
+Columns >90% missing (drop candidates): ['TaxAnnualAmount', 'FireplacesTotal', 'ElementarySchoolDistrict', 'TaxYear', 'BusinessType', 'MiddleOrJuniorSchoolDistrict', 'CoveredSpaces', 'AboveGradeFinishedArea', 'BelowGradeFinishedArea', 'CoBuyerAgentFirstName', 'BuilderName', 'LotSizeDimensions', 'BuildingAreaTotal']
+
+PropertyType breakdown:
+PropertyType
+Residential    523208
+Name: count, dtype: int64
+
+Percentile summaries:
+          ListPrice  OriginalListPrice  ...   DaysOnMarket      YearBuilt
+count  5.232080e+05       5.224560e+05  ...  523208.000000  522308.000000
+mean   1.314509e+06       1.398787e+06  ...      19.177761    1979.613854
+std    2.339138e+06       7.375134e+06  ...      26.515577      27.008939
+min    1.000000e+02       0.000000e+00  ...     -39.000000    1776.000000
+5%     3.450000e+05       3.475000e+05  ...       0.000000    1929.000000
+25%    5.800000e+05       5.850000e+05  ...       5.000000    1961.000000
+50%    8.450000e+05       8.490000e+05  ...      11.000000    1980.000000
+75%    1.379891e+06       1.390692e+06  ...      22.000000    2001.000000
+95%    3.450000e+06       3.495000e+06  ...      69.000000    2023.000000
+max    1.950000e+08       1.390000e+09  ...     731.000000    2028.000000
+
+[10 rows x 8 columns]
+Saved ListPrice.png
+Saved OriginalListPrice.png
+Saved LivingArea.png
+Saved LotSizeAcres.png
+Saved BedroomsTotal.png
+Saved BathroomsTotalInteger.png
+Saved DaysOnMarket.png
+Saved YearBuilt.png
+
+Median ListPrice: $845,000
+Mean ListPrice: $1,314,509
+
+Listings with price cut: 86965 (16.6%)
+
+Days on Market:
+count    523208.000000
+mean         19.177761
+std          26.515577
+min         -39.000000
+25%           5.000000
+50%          11.000000
+75%          22.000000
+max         731.000000
+Name: DaysOnMarket, dtype: float64
+
+Records where CloseDate < ListingContractDate: 69
+
+Median ListPrice by County:
+CountyOrParish
+San Mateo        1648000.0
+Santa Clara      1499000.0
+Marin            1295000.0
+Santa Cruz       1250000.0
+Orange           1224900.0
+San Francisco    1098000.0
+Alameda           998000.0
+Monterey          995000.0
+Los Angeles       950000.0
+San Diego         915000.0
+Name: ListPrice, dtype: float64
